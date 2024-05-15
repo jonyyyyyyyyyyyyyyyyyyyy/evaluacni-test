@@ -8,6 +8,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Alert from "@mui/material/Alert";
+import LinearProgress from '@mui/material/LinearProgress';
 
 const darkTheme = createTheme({
     palette: {
@@ -39,6 +40,7 @@ function App() {
             <CssBaseline />
             <Box sx={{ p: 3 }}>
                 <Typography variant="h3" marginLeft={90} fontWeight={100}>VÝBĚR POŘADU</Typography> <br />
+                <LinearProgress color="secondary" /> <br></br>
                 {vybranyPorad !== "" && (
                     <>
                         <Typography variant="h6">Vybraný pořad je: {vybranyPorad}</Typography> <br />
@@ -51,6 +53,7 @@ function App() {
                                 {spravnaOdpoved ? "Správně!" : "Špatně!"}
                             </Alert>
                         )}
+                        <LinearProgress color="secondary" /> <br></br>
                     </>
                 )}
                 <Grid container spacing={2}>
